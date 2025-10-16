@@ -37,7 +37,20 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.5.1</version>
             </plugin>
+            <!-- Make `java -jar target/calculator-1.0-SNAPSHOT.jar` work -->
+            <plugin>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.3.0</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>itm.oss.Main</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+
         </plugins>
     </build>
-    
+
 </project>
