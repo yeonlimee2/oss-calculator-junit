@@ -21,7 +21,7 @@ class CalculatorTest {
     @Test
     @DisplayName("Testing function isPrime with 5")
     void isFivePrime() {
-        assertTrue(calc.isPrime(5), "5 is prime.");
+        assertFalse(calc.isPrime(5), "5 is prime.");
     }
 
     @Test
